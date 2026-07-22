@@ -28,16 +28,3 @@ npm run dev
 ```bash
 npm run build
 ```
-
-## Deploy to GitHub Pages
-
-This repository is configured to deploy automatically with GitHub Actions.
-
-1. Push this project to a GitHub repository named `wizard-scorekeeper`.
-2. In GitHub, go to Settings > Pages.
-3. Under Build and deployment, set Source to `GitHub Actions`.
-4. Push to `main` to trigger deployment.
-
-Your app will be available at:
-
-`https://<your-github-username>.github.io/wizard-scorekeeper/`
