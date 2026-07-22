@@ -18,6 +18,7 @@ import {
   submitRound,
 } from './state/game'
 import jokerBig from './assets/jokerbig.png'
+import wbig from './assets/wbig.png'
 import './App.css'
 
 function App() {
@@ -104,6 +105,13 @@ function App() {
         <Box className="app-frame">
           <header className="hero-panel">
             <Box className={gameState.status === 'setup' ? 'hero-setup-row' : 'hero-standard-row'}>
+              {gameState.status === 'setup' ? (
+                <img
+                  className="setup-logo-art pixel-art"
+                  src={wbig}
+                  alt="Wizard joker W logo artwork"
+                />
+              ) : null}
               <Box className="hero-copy">
                 <Typography className="eyebrow" variant="overline" component="p">
                   Wizard scorekeeper

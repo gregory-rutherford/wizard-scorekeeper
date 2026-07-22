@@ -22,9 +22,16 @@
   gap: 12px;
 }
 
-.hero-setup-row,
 .hero-standard-row {
   display: grid;
+  gap: 12px;
+}
+
+.hero-setup-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas: 'logo copy card';
+  align-items: center;
   gap: 12px;
 }
 
@@ -33,12 +40,23 @@
   gap: 10px;
 }
 
-.setup-joker-art {
-  width: clamp(136px, 44vw, 220px);
+.hero-setup-row .hero-copy {
+  grid-area: copy;
+  min-width: 0;
+}
+
+.setup-logo-art {
+  grid-area: logo;
+  width: clamp(76px, 24vw, 132px);
   max-width: 100%;
-  justify-self: center;
-  border: 3px solid var(--border-strong);
-  box-shadow: 6px 6px 0 var(--border-strong);
+  justify-self: start;
+}
+
+.setup-joker-art {
+  grid-area: card;
+  width: clamp(101px, 31vw, 198px);
+  max-width: 100%;
+  justify-self: end;
   background: var(--surface-main);
 }
 
@@ -50,6 +68,8 @@
 .section-label {
   margin: 0 !important;
   font-family: var(--font-pixel) !important;
+  font-size: clamp(1.15rem, 4vw, 2rem) !important;
+  line-height: 1.3 !important;
   letter-spacing: 0.12em !important;
   color: var(--accent) !important;
 }
@@ -57,10 +77,9 @@
 .title {
   margin: 0 !important;
   font-family: var(--font-pixel) !important;
-  font-size: clamp(1.4rem, 4.8vw, 2.6rem) !important;
-  line-height: 1.35 !important;
+  font-size: clamp(0.92rem, 2.4vw, 1.4rem) !important;
+  line-height: 1.5 !important;
   color: var(--ink) !important;
-  text-transform: uppercase;
 }
 
 .subtitle,
@@ -331,6 +350,26 @@
   min-width: 720px;
 }
 
+@media (max-width: 700px) {
+  .hero-setup-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'copy copy'
+      'logo card';
+    align-items: start;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .setup-logo-art {
+    width: clamp(64px, 20vw, 96px);
+  }
+
+  .setup-joker-art {
+    width: clamp(86px, 27vw, 144px);
+  }
+}
+
 @media (min-width: 900px) {
   .app-shell {
     display: flex;
@@ -348,13 +387,17 @@
   }
 
   .hero-setup-row {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: start;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
     column-gap: 24px;
   }
 
+  .setup-logo-art {
+    width: min(11vw, 128px);
+  }
+
   .setup-joker-art {
-    width: min(18vw, 240px);
+    width: min(16.2vw, 216px);
     justify-self: end;
   }
 
