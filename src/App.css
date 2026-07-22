@@ -1,0 +1,375 @@
+﻿.app-shell {
+  min-height: 100svh;
+  padding: 14px;
+}
+
+.app-frame {
+  min-height: calc(100svh - 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 4px solid var(--border-strong);
+  border-radius: 0;
+  background: var(--surface-main);
+  box-shadow: 6px 6px 0 var(--border-strong);
+}
+
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-setup-row,
+.hero-standard-row {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.setup-joker-art {
+  width: clamp(136px, 44vw, 220px);
+  max-width: 100%;
+  justify-self: center;
+  border: 3px solid var(--border-strong);
+  box-shadow: 6px 6px 0 var(--border-strong);
+  background: var(--surface-main);
+}
+
+.hero-actions {
+  margin-top: 4px;
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 !important;
+  font-family: var(--font-pixel) !important;
+  letter-spacing: 0.12em !important;
+  color: var(--accent) !important;
+}
+
+.title {
+  margin: 0 !important;
+  font-family: var(--font-pixel) !important;
+  font-size: clamp(1.4rem, 4.8vw, 2.6rem) !important;
+  line-height: 1.35 !important;
+  color: var(--ink) !important;
+  text-transform: uppercase;
+}
+
+.subtitle,
+.hint,
+.footer-note {
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.45 !important;
+  color: var(--ink-muted) !important;
+  font-family: var(--font-pixel) !important;
+}
+
+.chip-row {
+  gap: 8px;
+}
+
+.retro-chip {
+  height: auto !important;
+  padding-block: 8px;
+  color: var(--ink) !important;
+  background: var(--chip-bg) !important;
+  border: 2px solid var(--chip-border) !important;
+}
+
+.content-grid,
+.active-game-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.setup-card,
+.scoreboard-card,
+.round-card {
+  width: 100%;
+}
+
+.card-title {
+  margin: 0 !important;
+  font-family: var(--font-pixel) !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  color: var(--ink) !important;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card-copy,
+.preview-meta {
+  margin: 0 !important;
+  color: var(--ink-muted) !important;
+  font-size: 1.06rem !important;
+  line-height: 1.45 !important;
+}
+
+.status-chip {
+  height: auto !important;
+  padding: 8px 10px;
+  color: var(--ink) !important;
+  background: var(--accent-soft) !important;
+  border: 2px solid var(--border-strong) !important;
+}
+
+.number-control {
+  display: grid;
+  gap: 8px;
+}
+
+.control-label {
+  margin: 0 !important;
+  font-size: 1.05rem !important;
+  color: var(--ink) !important;
+}
+
+.number-stepper {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.stepper-button,
+.secondary-button {
+  min-height: 52px !important;
+  border: 3px solid var(--border-strong) !important;
+  border-radius: 0 !important;
+  font-family: var(--font-pixel) !important;
+  letter-spacing: 0.08em !important;
+  color: var(--ink) !important;
+  background: var(--surface-main) !important;
+}
+
+.stepper-button {
+  min-width: 56px !important;
+}
+
+.stepper-button.Mui-disabled,
+.secondary-button.Mui-disabled,
+.primary-button.Mui-disabled {
+  opacity: 0.45 !important;
+}
+
+.stepper-input .MuiInputBase-root,
+.trump-select .MuiInputBase-root,
+.round-field .MuiInputBase-root,
+.player-name-input .MuiInputBase-root {
+  color: var(--ink) !important;
+  background: var(--surface-main) !important;
+  border-radius: 0 !important;
+}
+
+.stepper-input .MuiOutlinedInput-notchedOutline,
+.trump-select .MuiOutlinedInput-notchedOutline,
+.round-field .MuiOutlinedInput-notchedOutline,
+.player-name-input .MuiOutlinedInput-notchedOutline {
+  border-color: var(--border-strong) !important;
+}
+
+.stepper-input .MuiInputLabel-root,
+.trump-select .MuiInputLabel-root,
+.round-field .MuiInputLabel-root,
+.player-name-input .MuiInputLabel-root {
+  color: var(--ink-muted) !important;
+}
+
+.stepper-input input,
+.round-field input {
+  text-align: center;
+  font-family: var(--font-pixel) !important;
+}
+
+.field-helper {
+  margin: 0 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+  color: var(--ink-muted) !important;
+}
+
+.action-row {
+  margin-top: 4px;
+}
+
+.secondary-button {
+  border-color: var(--border-strong) !important;
+}
+
+.round-row {
+  padding: 12px;
+  border: 2px solid var(--border-strong);
+  border-radius: 0;
+  background: var(--surface-soft);
+}
+
+.round-player-name {
+  margin: 0 !important;
+  font-family: var(--font-pixel) !important;
+  font-size: 0.9rem !important;
+  color: var(--ink) !important;
+}
+
+.player-name-section {
+  gap: 12px !important;
+}
+
+.player-name-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.round-input-grid {
+  width: 100%;
+}
+
+.round-field {
+  flex: 1 1 0;
+}
+
+.empty-state {
+  margin: 0 !important;
+  padding: 12px 14px;
+  border: 2px dashed var(--border-strong);
+  border-radius: 0;
+  color: var(--ink-muted) !important;
+  background: var(--surface-soft);
+}
+
+.scoreboard-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scoreboard-table {
+  min-width: 100%;
+}
+
+.scoreboard-table .MuiTableCell-root {
+  border-bottom: 1px solid var(--border-soft) !important;
+  color: var(--ink) !important;
+}
+
+.scoreboard-table .MuiTableCell-head {
+  font-family: var(--font-pixel) !important;
+  font-size: 0.72rem !important;
+  color: var(--accent) !important;
+}
+
+.scoreboard-table .MuiTableRow-root:last-child .MuiTableCell-root {
+  border-bottom: none !important;
+}
+
+.retro-card {
+  border: 3px solid var(--border-strong) !important;
+  border-radius: 0 !important;
+  background: var(--surface-main) !important;
+  color: var(--ink) !important;
+  box-shadow: none !important;
+}
+
+.retro-card .MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px !important;
+}
+
+.primary-button {
+  min-height: 52px !important;
+  border: 3px solid var(--border-strong) !important;
+  border-radius: 0 !important;
+  font-family: var(--font-pixel) !important;
+  letter-spacing: 0.08em !important;
+  background: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  box-shadow: 6px 6px 0 var(--button-shadow) !important;
+}
+
+.primary-button:hover {
+  background: var(--button-bg-hover) !important;
+}
+
+.footer-note {
+  text-align: center;
+  font-family: var(--font-pixel) !important;
+}
+
+.footer-note .MuiTypography-root {
+  font-family: var(--font-pixel) !important;
+  font-size: 0.75rem !important;
+}
+
+.preview-summary {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.preview-table-wrap {
+  max-height: 56vh;
+  overflow: auto;
+  border: 2px solid var(--border-strong);
+  border-radius: 0;
+}
+
+.preview-table {
+  min-width: 720px;
+}
+
+@media (min-width: 900px) {
+  .app-shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 42px;
+  }
+
+  .app-frame {
+    width: min(1280px, 100%);
+    min-height: calc(100vh - 84px);
+    padding: 30px;
+    gap: 22px;
+    box-shadow: 14px 14px 0 var(--border-strong);
+  }
+
+  .hero-setup-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    column-gap: 24px;
+  }
+
+  .setup-joker-art {
+    width: min(18vw, 240px);
+    justify-self: end;
+  }
+
+  .active-game-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: start;
+  }
+
+  .round-input-grid,
+  .player-name-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .preview-table {
+    min-width: 0;
+  }
+}
